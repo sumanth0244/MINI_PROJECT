@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Caregiver window</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <a href="/">🧠 DementiaCare</a>
+    <span>Caregiver window</span>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="tag">CAREGIVER</p>
+      <h1>Register patients and review results.</h1>
+      <p>Create a Patient ID and email. Patients use that ID to play games. Their performance is stored here.</p>
+    </section>
+    <section class="panel">
+      <h2>Register a patient</h2>
+      <form id="add">
+        <input name="patient_code" placeholder="Patient ID e.g. P101" required>
+        <input name="email" type="email" placeholder="Patient or contact email" required>
+        <input name="full_name" placeholder="Full name (optional)">
+        <input name="caregiver_name" placeholder="Caregiver name (optional)">
+        <button>Register patient</button>
+      </form>
+      <p id="msg"></p>
+    </section>
+    <section class="panel">
+      <h2>Patients</h2>
+      <div class="row">
+        <select id="patient"><option value="">Loading...</option></select>
+        <button id="load">View results</button>
+      </div>
+      <div id="list" class="tablewrap"></div>
+    </section>
+    <section id="dash" hidden>
+      <h2 id="welcome">Results</h2>
+      <div id="progress"></div>
+    </section>
+    <p class="note">Supportive activities only. Game scores do not diagnose dementia or measure disease progression.</p>
+  </main>
+  <script src="/static/caregiver.js"></script>
+</body>
+</html>

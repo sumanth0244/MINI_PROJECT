@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Patient window</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <a href="/">🧠 DementiaCare</a>
+    <span>Patient window</span>
+  </header>
+  <main>
+    <section class="hero">
+      <p class="tag">PATIENT</p>
+      <h1>Enter your Patient ID to play.</h1>
+      <p>Your caregiver registers this ID. After you play, your results are saved for them to see.</p>
+    </section>
+    <section class="panel">
+      <h2>Sign in with Patient ID</h2>
+      <form id="login" class="row">
+        <input id="patient_code" name="patient_code" placeholder="Patient ID e.g. P101" required autocomplete="username">
+        <button>Continue</button>
+      </form>
+      <p id="msg"></p>
+    </section>
+    <section id="dash" hidden>
+      <h2 id="welcome">Games</h2>
+      <div id="games" class="cards"></div>
+    </section>
+    <p class="note">Ask your caregiver if you do not know your Patient ID. Take a break whenever you need one.</p>
+  </main>
+  <script src="/static/patient.js"></script>
+</body>
+</html>

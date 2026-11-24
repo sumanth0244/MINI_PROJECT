@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MindCare Game</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <header>
+    <a href="/">🧠 MindCare</a>
+    <span id="level"></span>
+  </header>
+  <main>
+    <a href="/patient">← Patient window</a>
+    <section class="panel">
+      <p class="tag">COGNITIVE ACTIVITY</p>
+      <h1 id="title"></h1>
+      <p id="instruction"></p>
+      <div id="area" class="playarea">Loading game...</div>
+      <p id="feedback" aria-live="polite"></p>
+      <button id="submit" disabled>Submit activity</button>
+      <button id="again" hidden>Play another round</button>
+      <div id="result"></div>
+    </section>
+    <p class="note">Take a break whenever needed. A caregiver can help or stop the activity.</p>
+  </main>
+  <script>window.GAME_KEY={{ game_key|tojson }};</script>
+  <script src="/static/game.js"></script>
+</body>
+</html>
